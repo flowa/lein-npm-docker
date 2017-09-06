@@ -1,4 +1,4 @@
-FROM node:8.4.0
+FROM node:7.10.1
 
 RUN echo "deb http://ftp.ru.debian.org/debian/ jessie-backports main contrib non-free" > /etc/apt/sources.list.d/backports.list && \
     echo "deb http://ftp.ru.debian.org/debian/ jessie main contrib non-free"           > /etc/apt/sources.list && \
@@ -52,5 +52,4 @@ ENV LEIN_ROOT 1
 # Install clojure 1.8.0 so users don't have to download it every time
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.8.0"]])' > project.clj \
   && lein deps && rm project.clj
-
-RUN npm install firebase-tools
+RUN npm install -g firebase-tools
