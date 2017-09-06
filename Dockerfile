@@ -52,4 +52,4 @@ ENV LEIN_ROOT 1
 # Install clojure 1.8.0 so users don't have to download it every time
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.8.0"]])' > project.clj \
   && lein deps && rm project.clj
-RUN npm install -g firebase-tools
+RUN npm install -g firebase-tools phantomjs
