@@ -72,4 +72,4 @@ RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.8.0"]])' >
   && lein deps && rm project.clj
 
 RUN ln -s /google-cloud-sdk/bin/gcloud /bin/gcloud
-RUN npm install -g firebase-tools phantomjs
+RUN npm install -g firebase-tools phantomjs #trigger
