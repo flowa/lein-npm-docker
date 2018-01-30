@@ -1,4 +1,4 @@
-FROM node:7.10.1
+FROM node:6.11.5
 
 RUN echo "deb http://ftp.ru.debian.org/debian/ jessie-backports main contrib non-free" > /etc/apt/sources.list.d/backports.list && \
     echo "deb http://ftp.ru.debian.org/debian/ jessie main contrib non-free"           > /etc/apt/sources.list && \
